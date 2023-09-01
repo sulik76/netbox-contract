@@ -213,6 +213,7 @@ class Invoice(NetBoxModel):
         default=CurrencyChoices.CURRENCY_USD
     )
     accounting_dimensions = models.JSONField(
+        blank=True,
         null=True
     )
     amount = models.DecimalField(
